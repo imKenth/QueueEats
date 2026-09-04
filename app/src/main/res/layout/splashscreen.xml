@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+
+    android:background="@drawable/gradient_background"
+    >
+
+    <View
+        android:layout_width="281dp"
+        android:layout_height="288dp"
+        android:background="@drawable/circle"
+
+        android:translationX="183dp"
+        android:translationY="116dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:layout_width="251dp"
+        android:layout_height="267dp"
+        android:background="@drawable/dark_circle"
+
+        android:translationX="181dp"
+        android:translationY="421dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:layout_width="183dp"
+        android:layout_height="188dp"
+        android:background="@drawable/lightdark_circle"
+
+        android:translationX="0dp"
+        android:translationY="292dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:layout_width="123dp"
+        android:layout_height="126dp"
+        android:background="@drawable/circle"
+
+        android:translationX="83dp"
+        android:translationY="436dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="367dp"
+        android:layout_height="245dp"
+
+        android:src="@drawable/mylogo"
+        android:scaleType="fitCenter"
+        android:translationY="90dp"
+        android:contentDescription="@string/app_name"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginTop="175dp"/>
+
+    <TextView
+        android:id="@+id/undertext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tagline"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins"
+
+        android:translationY="60dp"
+
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

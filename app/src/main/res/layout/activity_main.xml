@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome!"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/undertext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pre-order, Skip the line, Enjoy more"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="@id/title"
+        android:layout_marginTop="8dp" />
+
+    <!-- Main Button -->
+    <Button
+        android:id="@+id/orderButton"
+        android:layout_width="200dp"
+        android:layout_height="55dp"
+        android:text="Order Now"
+        android:textSize="16sp"
+
+        app:layout_constraintTop_toBottomOf="@id/undertext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp" />
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/white"
+
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Home" />
+
+        <Button
+            android:id="@+id/serviceButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Service" />
+
+        <Button
+            android:id="@+id/moreButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="More" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

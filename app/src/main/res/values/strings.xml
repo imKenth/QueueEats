@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">QueueEats</string>
+    <string name="tagline">Pre-order, Skip the line, Enjoy more</string>
+    <string name="wc">Welcome Back!</string>
+    <string name="wc_tag">Use your school account credentials</string>
+
+</resources>

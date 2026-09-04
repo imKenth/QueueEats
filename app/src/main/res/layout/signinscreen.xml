@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Guideline at 40% to define the boundary between Image/Logo and Form -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/form_boundary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="291dp" />
+
+    <!-- Header Branding Component -->
+    <include
+        layout="@layout/layout_header_branding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Scrollable Form Area -->
+    <ScrollView
+        android:id="@+id/form_scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/form_boundary">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="24dp">
+
+            <!-- Welcome Back! -->
+            <TextView
+                android:id="@+id/welcome_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/konkhmer_sleokchher"
+                android:text="@string/wc"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Use your school account credentials -->
+            <TextView
+                android:id="@+id/welcome_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/kedebideri"
+                android:text="@string/wc_tag"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/welcome_back" />
+
+            <!-- Email Address Label -->
+            <TextView
+                android:id="@+id/email_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/kedebideri"
+                android:text="Email Address"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/welcome_subtitle" />
+
+            <!-- Email Input -->
+            <EditText
+                android:id="@+id/usernameInput"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/background_global"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="10dp"
+                android:hint="you@school.edu.ph"
+                android:inputType="textEmailAddress"
+                android:paddingStart="10dp"
+                android:singleLine="true"
+                android:textColor="#333333"
+                android:textColorHint="#999999"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/email_label" />
+
+            <!-- Password Label -->
+            <TextView
+                android:id="@+id/password_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/kedebideri"
+                android:text="Password"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/usernameInput" />
+
+            <!-- Password Input -->
+            <EditText
+                android:id="@+id/passwordInput"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/background_global"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawablePadding="10dp"
+                android:hint="*********"
+                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:singleLine="true"
+                android:textColor="#333333"
+                android:textColorHint="#999999"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/password_label" />
+
+            <!-- Forgot Password -->
+            <TextView
+                android:id="@+id/forgotpassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="25dp"
+                android:fontFamily="@font/kedebideri"
+                android:text="Forgot Password?"
+                android:textColor="#803700"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/passwordInput" />
+
+            <!-- Sign In Button -->
+            <Button
+                android:id="@+id/signin_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/shape_drawable"
+                android:text="Sign In"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/forgotpassword" />
+
+            <!-- OR Divider -->
+            <View
+                android:id="@+id/line_left"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="15dp"
+                android:background="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/orText"
+                app:layout_constraintEnd_toStartOf="@id/orText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/orText" />
+
+            <TextView
+                android:id="@+id/orText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/kedebideri"
+                android:text="OR"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/signin_button" />
+
+            <View
+                android:id="@+id/line_right"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="25dp"
+                android:background="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/orText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/orText"
+                app:layout_constraintTop_toTopOf="@id/orText" />
+
+            <!-- Sign In with Google -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signin_email_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/background_global"
+                android:fontFamily="@font/kedebideri"
+                android:text="Sign In with Google"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:icon="@drawable/google"
+                app:iconGravity="textStart"
+                app:iconPadding="10dp"
+                app:iconTint="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/orText" />
+
+            <!-- Footer: New to QE? Create account -->
+            <LinearLayout
+                android:id="@+id/footer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/signin_email_button">
+
+                <TextView
+                    android:id="@+id/NewtoQE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kedebideri"
+                    android:text="New to QE?"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/proceed_signupscreen"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/kedebideri"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="0dp"
+                    android:text="Create account"
+                    android:textColor="#803700"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/poppins</item>
+        <item>@font/inter</item>
+        <item>@font/montserrat</item>
+        <item>@font/roboto</item>
+        <item>@font/kedebideri</item>
+        <item>@font/khula</item>
+        <item>@font/konkhmer_sleokchher</item>
+        <item>@font/madimi_one</item>
+        <item>@font/lao_muang_khong</item>
+    </array>
+</resources>
