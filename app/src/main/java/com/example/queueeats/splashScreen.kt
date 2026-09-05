@@ -13,8 +13,8 @@ import androidx.core.view.WindowInsetsControllerCompat
 
 class splashScreen : AppCompatActivity() {
 
-    override fun onCreate(savedInstance: Bundle?) {
-        super.onCreate(savedInstance)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         
         // Enables edge-to-edge display for the splash screen background.
         enableEdgeToEdge()
@@ -34,7 +34,7 @@ class splashScreen : AppCompatActivity() {
 
         // Navigation delay: Waits 3 seconds before moving to the main sign-in screen.
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, SignInActivity::class.java)
             startActivity(intent)
             finish()
         }, 3000)
