@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="260dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp">
+
+        <!-- Banner Image -->
+        <ImageView
+            android:id="@+id/branch_banner"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_header_old"
+            android:contentDescription="@string/branch_banner_desc"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Logo Background (White Circle) -->
+        <View
+            android:id="@+id/logo_border"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_white_circle"
+            app:layout_constraintTop_toBottomOf="@id/branch_banner"
+            app:layout_constraintBottom_toBottomOf="@id/branch_banner"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" />
+
+        <!-- Store Logo -->
+        <ImageView
+            android:id="@+id/branch_logo"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/img_app_icon_old"
+            android:contentDescription="@string/branch_logo_desc"
+            app:layout_constraintTop_toTopOf="@id/logo_border"
+            app:layout_constraintBottom_toBottomOf="@id/logo_border"
+            app:layout_constraintStart_toStartOf="@id/logo_border"
+            app:layout_constraintEnd_toEndOf="@id/logo_border" />
+
+        <!-- Rating & Distance -->
+        <LinearLayout
+            android:id="@+id/rating_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@id/branch_banner"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_star"
+                android:contentDescription="@string/star_desc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cal_branch_rating"
+                android:textSize="12sp"
+                android:textColor="#666666"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/kedebideri" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dot_separator"
+                android:textSize="12sp"
+                android:textColor="#666666" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cal_branch_distance"
+                android:textSize="12sp"
+                android:textColor="#666666"
+                android:fontFamily="@font/kedebideri" />
+        </LinearLayout>
+
+        <!-- Store Name -->
+        <TextView
+            android:id="@+id/tv_branch_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cal_branch_name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/kedebideri"
+            app:layout_constraintTop_toBottomOf="@id/branch_banner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Address Line 1 -->
+        <TextView
+            android:id="@+id/tv_address_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cal_branch_location_1"
+            android:textSize="13sp"
+            android:textColor="#999999"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/kedebideri"
+            app:layout_constraintTop_toBottomOf="@id/tv_branch_name"
+            app:layout_constraintStart_toStartOf="@id/tv_branch_name"
+            app:layout_constraintEnd_toEndOf="@id/tv_branch_name" />
+
+        <!-- Address Line 2 -->
+        <TextView
+            android:id="@+id/tv_address_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cal_branch_location_2"
+            android:textSize="13sp"
+            android:textColor="#999999"
+            android:fontFamily="@font/kedebideri"
+            app:layout_constraintTop_toBottomOf="@id/tv_address_1"
+            app:layout_constraintStart_toStartOf="@id/tv_address_1"
+            app:layout_constraintEnd_toEndOf="@id/tv_address_1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

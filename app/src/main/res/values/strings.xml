@@ -3,5 +3,32 @@
     <string name="tagline">Pre-order, Skip the line, Enjoy more</string>
     <string name="wc">Welcome Back!</string>
     <string name="wc_tag">Use your school account credentials</string>
+    <string name="banner_promo_text">Special grilled chicken with 20% discount today!</string>
+    <string name="order_now">Order Now</string>
+    <string name="delicious_text">Delicious</string>
+    <string name="question_mark">\?</string>
+    <string name="banner_subtitle_text">Pre-order, skip the line,\nenjoy more.</string>
+    <string name="search_hint">Search your favorite food&#8230;</string>
+    <string name="filter_desc">Filter</string>
+
+    <string name="branch_name">QueueEats</string>
+    <string name="branch_rating">4.8 (120)</string>
+    <string name="branch_distance">0.3 km</string>
+    <string name="branch_location_1">Poblacion District &#8226;</string>
+    <string name="branch_location_2">Roxas Avenue Night Market</string>
+    <string name="dot_separator"> &#8226; </string>
+    <string name="branch_banner_desc">Branch Banner</string>
+    <string name="branch_logo_desc">Branch Logo</string>
+    <string name="star_desc">Rating Star</string>
+
+    <string name="cal_branch_name">QueueEats</string>
+    <string name="cal_branch_rating">4.6 (134)</string>
+    <string name="cal_branch_distance">0.5 km</string>
+    <string name="cal_branch_location_1">Calinan, • Datu Abing (Abeng) &#8226;</string>
+    <string name="cal_branch_location_2">Street and the National Highway</string>
+    <string name="cal_dcal_ot_separator"> &#8226; </string>
+    <string name="cal_branch_banner_desc">Branch Banner</string>
+    <string name="cal_branch_logo_desc">Branch Logo</string>
+    <string name="cal_star_desc">Rating Star</string>
 
 </resources>

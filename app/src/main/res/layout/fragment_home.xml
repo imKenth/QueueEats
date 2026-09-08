@@ -26,7 +26,46 @@
             android:paddingStart="20dp"
             android:paddingEnd="20dp" >
 
-            <include layout="@layout/section_home_header" />
+            <include
+                layout="@layout/section_home_header" />
+
+            <include
+                android:id="@+id/banner_promo"
+                layout="@layout/promotional_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"/>
+
+            <include
+                layout="@layout/layout_search_bar"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Quick Actions"
+                android:textStyle="bold"
+                android:fontFamily="@font/kedebideri"
+                android:textSize="13sp"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Our Food Stall branches"
+                android:textStyle="bold"
+                android:fontFamily="@font/kedebideri"
+                android:textSize="13sp"
+                android:layout_marginTop="20dp" />
+
+            <include
+                layout="@layout/branches"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
