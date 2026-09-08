@@ -173,39 +173,40 @@
                 app:layout_constraintTop_toBottomOf="@id/password_label" />
 
             <!-- Confirm Password Label & Input -->
-            <TextView
-                android:id="@+id/confirm_password_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/kedebideri"
-                android:text="Confirm Password"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/passwordInput" />
+<!--            <TextView-->
+<!--                android:id="@+id/confirm_password_label"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="25dp"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:fontFamily="@font/kedebideri"-->
+<!--                android:text="Confirm Password"-->
+<!--                android:textSize="12sp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/passwordInput" />-->
 
-            <EditText
-                android:id="@+id/confirmPasswordInput"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="25dp"
-                android:background="@drawable/bg_input_field"
-                android:drawableStart="@drawable/ic_lock"
-                android:drawablePadding="10dp"
-                android:hint="*********"
-                android:inputType="textPassword"
-                android:paddingStart="10dp"
-                android:singleLine="true"
-                android:textColor="#333333"
-                android:textColorHint="#999999"
-                android:textSize="11sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/confirm_password_label" />
+<!--            <EditText-->
+<!--                android:id="@+id/confirmPasswordInput"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_marginStart="25dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginEnd="25dp"-->
+<!--                android:background="@drawable/bg_input_field"-->
+<!--                android:drawableStart="@drawable/ic_lock"-->
+<!--                android:drawablePadding="10dp"-->
+<!--                android:hint="*********"-->
+<!--                android:inputType="textPassword"-->
+<!--                android:paddingStart="10dp"-->
+<!--                android:singleLine="true"-->
+<!--                android:textColor="#333333"-->
+<!--                android:textColorHint="#999999"-->
+<!--                android:textSize="11sp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/confirm_password_label" />-->
+
 
             <!-- Sign Up Button -->
             <Button
@@ -223,7 +224,7 @@
                 app:backgroundTint="@null"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/confirmPasswordInput" />
+                app:layout_constraintTop_toBottomOf="@id/passwordInput" />
 
             <!-- Footer: Already have an account? Sign In -->
             <LinearLayout

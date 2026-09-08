@@ -1,7 +1,10 @@
 package com.example.queueeats
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
@@ -21,6 +24,8 @@ class DashboardActivity : AppCompatActivity() {
             insets
         }
 
+        val logButton = findViewById<Button>(R.id.logButton)
+
         // Navigation Logic
         val navHome = findViewById<FrameLayout>(R.id.navHome)
         val navMore = findViewById<FrameLayout>(R.id.navMore)
@@ -28,12 +33,18 @@ class DashboardActivity : AppCompatActivity() {
         val homeIcon = findViewById<ImageView>(R.id.homeIcon)
         val moreIcon = findViewById<ImageView>(R.id.moreIcon)
 
+        val homeContent = findViewById<View>(R.id.home_content)
+        val profileContent = findViewById<View>(R.id.profile_content)
+
         navHome?.setOnClickListener {
             navHome.setBackgroundResource(R.drawable.bg_navbar_selected)
             navMore?.background = null
 
             homeIcon?.setColorFilter(Color.WHITE)
             moreIcon?.setColorFilter(Color.BLACK)
+
+            homeContent?.visibility = View.VISIBLE
+            profileContent?.visibility = View.GONE
         }
 
         navMore?.setOnClickListener {
@@ -42,6 +53,15 @@ class DashboardActivity : AppCompatActivity() {
 
             homeIcon?.setColorFilter(Color.BLACK)
             moreIcon?.setColorFilter(Color.WHITE)
+
+            homeContent?.visibility = View.GONE
+            profileContent?.visibility = View.VISIBLE
+        }
+
+        logButton?.setOnClickListener {
+            val intent = Intent(this, SignInActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
     }

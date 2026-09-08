@@ -3,6 +3,7 @@ package com.example.queueeats
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -30,10 +31,19 @@ class SignInActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val usernameInput = findViewById<EditText>(R.id.usernameInput)
+
+        val passwordInput = findViewById<EditText>(R.id.passwordInput)
+
+
         // Logic to switch to dashboard screen
         findViewById<Button>(R.id.signin_button).setOnClickListener {
-            val intent = Intent(this, DashboardActivity::class.java)
-            startActivity(intent)
+            if(usernameInput.text.toString() == "kenthdaryl@gmail.com" && passwordInput.text.toString() == "12345678") {
+                val intent = Intent(this, DashboardActivity::class.java)
+                startActivity(intent)
+            } else {
+
+            }
         }
     }
 }

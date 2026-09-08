@@ -14,8 +14,8 @@
     <string name="branch_name">QueueEats</string>
     <string name="branch_rating">4.8 (120)</string>
     <string name="branch_distance">0.3 km</string>
-    <string name="branch_location_1">Poblacion District &#8226;</string>
-    <string name="branch_location_2">Roxas Avenue Night Market</string>
+    <string name="branch_location_1">JanPol Canteen 1 &#8226;</string>
+    <string name="branch_location_2">Orange stall</string>
     <string name="dot_separator"> &#8226; </string>
     <string name="branch_banner_desc">Branch Banner</string>
     <string name="branch_logo_desc">Branch Logo</string>
@@ -24,11 +24,38 @@
     <string name="cal_branch_name">QueueEats</string>
     <string name="cal_branch_rating">4.6 (134)</string>
     <string name="cal_branch_distance">0.5 km</string>
-    <string name="cal_branch_location_1">Calinan, • Datu Abing (Abeng) &#8226;</string>
-    <string name="cal_branch_location_2">Street and the National Highway</string>
+    <string name="cal_branch_location_1">janPol Canteen 2 &#8226;</string>
+    <string name="cal_branch_location_2">Red stall</string>
     <string name="cal_dcal_ot_separator"> &#8226; </string>
     <string name="cal_branch_banner_desc">Branch Banner</string>
     <string name="cal_branch_logo_desc">Branch Logo</string>
     <string name="cal_star_desc">Rating Star</string>
+
+    <!-- Profile Screen -->
+    <string name="profile_title">Manage your account and more.</string>
+    <string name="user_name">Kenth Daryl Velasco</string>
+    <string name="user_phone">0910280277</string>
+    <string name="user_email">kenthdaryl123@gmail.com</string>
+    <string name="my_orders">My Orders</string>
+    <string name="favorites">Favorites</string>
+    <string name="coupons">Coupons</string>
+    <string name="addresses">Addresses</string>
+    <string name="my_account">My Account</string>
+    <string name="profile_information">Profile Information</string>
+    <string name="profile_info_subtitle">View and edit your profile</string>
+    <string name="payment_methods">Payment Methods</string>
+    <string name="payment_methods_subtitle">Manage your payment methods</string>
+    <string name="notifications">Notifications</string>
+    <string name="notifications_subtitle">Manage your preference</string>
+    <string name="privacy_security">Privacy &amp; Security</string>
+    <string name="privacy_security_subtitle">Manage your privacy settings</string>
+    <string name="support_about">Support &amp; About</string>
+    <string name="help_center">Help Center</string>
+    <string name="help_center_subtitle">Get help and support</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="contact_us_subtitle">Talk to our support team</string>
+    <string name="about_queueeats">About QueueEats</string>
+    <string name="about_queueeats_subtitle">Learn more about us</string>
+    <string name="logout">Log Out</string>
 
 </resources>
