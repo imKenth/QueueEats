@@ -28,6 +28,7 @@
             android:textSize="11sp" />
 
         <TextView
+            android:id="@+id/header_profName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Kenth Daryl Velasco"

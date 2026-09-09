@@ -12,11 +12,16 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
+import android.widget.TextView
+import com.example.queueeats.data.UserRepository
+
 class DashboardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
+        updateProfileUI()
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -59,10 +64,22 @@ class DashboardActivity : AppCompatActivity() {
         }
 
         logButton?.setOnClickListener {
+            UserRepository.currentUser = null
             val intent = Intent(this, SignInActivity::class.java)
             startActivity(intent)
             finish()
         }
 
+    }
+
+    private fun updateProfileUI() {
+        val user = UserRepository.currentUser
+        if (user != null) {
+            findViewById<TextView>(R.id.profile_name)?.text = user.name
+            findViewById<TextView>(R.id.profile_email)?.text = user.email
+            findViewById<TextView>(R.id.profile_phone)?.text = "No phone set"
+
+            findViewById<TextView>(R.id.header_profName)?.text = user.name
+        }
     }
 }

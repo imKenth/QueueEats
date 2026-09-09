@@ -54,6 +54,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/profile_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/kedebideri"
@@ -63,6 +64,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/profile_phone"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/user_phone"
@@ -70,6 +72,7 @@
                         android:textSize="14sp" />
 
                     <TextView
+                        android:id="@+id/profile_email"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/user_email"

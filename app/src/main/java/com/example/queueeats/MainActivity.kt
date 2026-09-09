@@ -35,9 +35,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val usernameInput = findViewById<EditText>(R.id.usernameInput)
-
-        val passwordInput = findViewById<EditText>(R.id.passwordInput)
 
 
 

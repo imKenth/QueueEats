@@ -67,19 +67,36 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/signup_title" />
 
+            <!-- Feedback Message -->
+            <TextView
+                android:id="@+id/signup_feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/kedebideri"
+                android:textColor="#FF0000"
+                android:textSize="11sp"
+                android:visibility="gone"
+                android:background="@drawable/bg_white_circle"
+                tools:text="Please fill all fields"
+                tools:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/signup_subtitle" />
+
             <!-- Full Name Label & Input -->
             <TextView
                 android:id="@+id/name_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/kedebideri"
                 android:text="Full Name"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/signup_subtitle" />
+                app:layout_constraintTop_toBottomOf="@id/signup_feedback" />
 
             <EditText
                 android:id="@+id/nameInput"
