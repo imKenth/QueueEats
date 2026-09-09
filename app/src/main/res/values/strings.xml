@@ -15,7 +15,7 @@
     <string name="branch_rating">4.8 (120)</string>
     <string name="branch_distance">0.3 km</string>
     <string name="branch_location_1">JanPol Canteen 1 &#8226;</string>
-    <string name="branch_location_2">Orange stall</string>
+    <string name="branch_location_2">Orange Stall</string>
     <string name="dot_separator"> &#8226; </string>
     <string name="branch_banner_desc">Branch Banner</string>
     <string name="branch_logo_desc">Branch Logo</string>
@@ -24,18 +24,17 @@
     <string name="cal_branch_name">QueueEats</string>
     <string name="cal_branch_rating">4.6 (134)</string>
     <string name="cal_branch_distance">0.5 km</string>
-    <string name="cal_branch_location_1">janPol Canteen 2 &#8226;</string>
-    <string name="cal_branch_location_2">Red stall</string>
-    <string name="cal_dcal_ot_separator"> &#8226; </string>
+    <string name="cal_branch_location_1">JanPol Canteen 2 &#8226;</string>
+    <string name="cal_branch_location_2">Red Stall</string>
     <string name="cal_branch_banner_desc">Branch Banner</string>
     <string name="cal_branch_logo_desc">Branch Logo</string>
     <string name="cal_star_desc">Rating Star</string>
 
     <!-- Profile Screen -->
     <string name="profile_title">Manage your account and more.</string>
-    <string name="user_name">Kenth Daryl Velasco</string>
-    <string name="user_phone">0910280277</string>
-    <string name="user_email">kenthdaryl123@gmail.com</string>
+    <string name="user_name">User Name</string>
+    <string name="user_phone">Phone Number</string>
+    <string name="user_email">Email Address</string>
     <string name="my_orders">My Orders</string>
     <string name="favorites">Favorites</string>
     <string name="coupons">Coupons</string>
