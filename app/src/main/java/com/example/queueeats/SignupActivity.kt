@@ -3,9 +3,11 @@ package com.example.queueeats
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.text.Html
 import android.util.Patterns
 import android.view.View
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -21,13 +23,18 @@ class SignupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.signupscreen)
+        setContentView(R.layout.activity_sign_up)
 
         val nameInput = findViewById<EditText>(R.id.nameInput)
         val usernameInput = findViewById<EditText>(R.id.usernameInput)
         val passwordInput = findViewById<EditText>(R.id.passwordInput)
         val signupButton = findViewById<Button>(R.id.signup_button)
         val feedbackText = findViewById<TextView>(R.id.signup_feedback)
+        val termsCheckbox = findViewById<CheckBox>(R.id.terms_checkbox)
+        val termsText = findViewById<TextView>(R.id.terms_text)
+
+        // Set terms text with HTML styling
+        termsText.text = Html.fromHtml(getString(R.string.terms_agreement), Html.FROM_HTML_MODE_LEGACY)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.signup_root)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -74,7 +81,13 @@ class SignupActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // 4. Success Case
+            // 4. Validate Terms Agreement
+            if (!termsCheckbox.isChecked) {
+                showError(getString(R.string.must_agree_terms))
+                return@setOnClickListener
+            }
+
+            // 5. Success Case
             val newUser = User(name, email, password)
             UserRepository.addUser(newUser)
             

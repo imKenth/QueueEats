@@ -18,9 +18,9 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <include layout="@layout/poblancion_branch" />
+            <include layout="@layout/item_branch_poblacion" />
 
-            <include layout="@layout/calinan_branch" />
+            <include layout="@layout/item_branch_calinan" />
 
         </LinearLayout>
 

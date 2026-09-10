@@ -14,12 +14,41 @@
     <string name="branch_name">QueueEats</string>
     <string name="branch_rating">4.8 (120)</string>
     <string name="branch_distance">0.3 km</string>
+    <string name="branch_location_full">JanPol Canteen 1 • Orange Stall</string>
     <string name="branch_location_1">JanPol Canteen 1 &#8226;</string>
     <string name="branch_location_2">Orange Stall</string>
+    <string name="branch_time_range">6:00AM - 10:00PM</string>
+    <string name="location_desc">Location Pin</string>
     <string name="dot_separator"> &#8226; </string>
     <string name="branch_banner_desc">Branch Banner</string>
     <string name="branch_logo_desc">Branch Logo</string>
     <string name="star_desc">Rating Star</string>
+    <string name="branch_status_open">Open</string>
+    <string name="category_meals">Meals</string>
+    <string name="category_dessert">Dessert</string>
+    <string name="category_snacks">Snacks</string>
+    <string name="category_drinks">Drinks</string>
+    <string name="section_filipino_meals">Filipino Meals</string>
+    <string name="dish_count">6 dishes</string>
+    <string name="branch_info_placeholder">%1$s • %2$s</string>
+    <string name="branch_rating_combined">4.8 (120) • 0.3km</string>
+
+    <string name="email_address">Email Address</string>
+    <string name="email_hint">you@school.edu.ph</string>
+    <string name="password">Password</string>
+    <string name="password_hint">*********</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="or_divider">OR</string>
+    <string name="sign_in_google">Sign In with Google</string>
+    <string name="new_to_qe">New to QE?</string>
+    <string name="create_account">Create account</string>
+    <string name="nav_back">Go back</string>
+
+    <string name="terms_agreement">I agree to the Terms of Service and Privacy Policy</string>
+    <string name="terms_service">Terms of Service</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="must_agree_terms">Please agree to the Terms of Service and Privacy Policy</string>
 
     <string name="cal_branch_name">QueueEats</string>
     <string name="cal_branch_rating">4.6 (134)</string>

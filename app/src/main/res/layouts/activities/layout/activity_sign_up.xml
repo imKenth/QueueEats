@@ -5,7 +5,7 @@
     android:id="@+id/signup_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".SignupActivity">
 
     <!-- Guideline for Form Section -->
     <androidx.constraintlayout.widget.Guideline
@@ -189,41 +189,38 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/password_label" />
 
-            <!-- Confirm Password Label & Input -->
-<!--            <TextView-->
-<!--                android:id="@+id/confirm_password_label"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="25dp"-->
-<!--                android:layout_marginTop="16dp"-->
-<!--                android:fontFamily="@font/kedebideri"-->
-<!--                android:text="Confirm Password"-->
-<!--                android:textSize="12sp"-->
-<!--                android:textStyle="bold"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@id/passwordInput" />-->
+            <!-- Terms and Conditions Checkbox -->
+            <LinearLayout
+                android:id="@+id/terms_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="25dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/passwordInput">
 
-<!--            <EditText-->
-<!--                android:id="@+id/confirmPasswordInput"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="40dp"-->
-<!--                android:layout_marginStart="25dp"-->
-<!--                android:layout_marginTop="8dp"-->
-<!--                android:layout_marginEnd="25dp"-->
-<!--                android:background="@drawable/bg_input_field"-->
-<!--                android:drawableStart="@drawable/ic_lock"-->
-<!--                android:drawablePadding="10dp"-->
-<!--                android:hint="*********"-->
-<!--                android:inputType="textPassword"-->
-<!--                android:paddingStart="10dp"-->
-<!--                android:singleLine="true"-->
-<!--                android:textColor="#333333"-->
-<!--                android:textColorHint="#999999"-->
-<!--                android:textSize="11sp"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@id/confirm_password_label" />-->
+                <CheckBox
+                    android:id="@+id/terms_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="0dp"
+                    android:buttonTint="@color/primary_orange" />
 
+                <TextView
+                    android:id="@+id/terms_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/kedebideri"
+                    android:text="@string/terms_agreement"
+                    android:textSize="11sp" />
+            </LinearLayout>
 
             <!-- Sign Up Button -->
             <Button
@@ -231,17 +228,19 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginEnd="25dp"
                 android:background="@drawable/bg_button_main"
-                android:text="Sign Up"
+                android:fontFamily="@font/kedebideri"
+                android:text="Create Account"
+                android:textAllCaps="false"
                 android:textColor="#FFFFFF"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:backgroundTint="@null"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/passwordInput" />
+                app:layout_constraintTop_toBottomOf="@id/terms_container" />
 
             <!-- Footer: Already have an account? Sign In -->
             <LinearLayout

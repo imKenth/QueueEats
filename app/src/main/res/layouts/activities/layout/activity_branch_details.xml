@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/branch1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Branch1Activity">
+
+    <!-- Fixed Header Image -->
+    <ImageView
+        android:id="@+id/branch_header"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/branch_banner_desc"
+        android:scaleType="centerCrop"
+        android:src="@drawable/branch1img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/form_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical">
+
+            <!-- Transparent spacer to allow header image to be seen -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="180dp" />
+
+            <!-- Content area with rounded top corners -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rounded_top_white"
+                android:paddingBottom="40dp">
+
+                <!-- Store Logo -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/logo_container"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="40dp"
+                    app:cardElevation="4dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/branch_logo_desc"
+                        android:padding="8dp"
+                        android:src="@drawable/img_app_icon_old" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_branch_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/kedebideri"
+                    android:text="@string/branch_name"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/logo_container"
+                    app:layout_constraintTop_toTopOf="@id/logo_container" />
+
+                <LinearLayout
+                    android:id="@+id/location_row"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_branch_title"
+                    app:layout_constraintTop_toBottomOf="@id/tv_branch_title">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:contentDescription="@string/location_desc"
+                        android:src="@drawable/ic_addresses"
+                        app:tint="#999999" />
+
+                    <TextView
+                        android:id="@+id/tv_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:fontFamily="@font/kedebideri"
+                        android:text="@string/branch_location_full"
+                        android:textColor="#999999"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/info_row"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_branch_title"
+                    app:layout_constraintTop_toBottomOf="@id/location_row">
+
+                    <LinearLayout
+                        android:id="@+id/rating_part"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:contentDescription="@string/star_desc"
+                            android:src="@drawable/ic_star"
+                            app:tint="#FF8C38" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:fontFamily="@font/kedebideri"
+                            android:text="@string/branch_rating_combined"
+                            android:textColor="#FF8C38"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Status Pill Badge -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_chip_unselected"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="1dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_chip_selected"
+                            android:backgroundTint="#DFF6E6"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="4dp">
+
+                            <View
+                                android:layout_width="6dp"
+                                android:layout_height="6dp"
+                                android:background="@drawable/bg_circle_dark"
+                                android:backgroundTint="#27AE60" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:fontFamily="@font/kedebideri"
+                                android:text="@string/branch_status_open"
+                                android:textColor="#27AE60"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="8dp"
+                            android:fontFamily="@font/kedebideri"
+                            android:text="@string/branch_time_range"
+                            android:textColor="#999999"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Action Buttons -->
+                <LinearLayout
+                    android:id="@+id/action_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="24dp"
+                    app:layout_constraintTop_toBottomOf="@id/info_row">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="0dp"
+                        android:layout_height="54dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_orange_button"
+                        android:fontFamily="@font/kedebideri"
+                        android:text="@string/order_now"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="12dp"
+                        android:layout_height="match_parent" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="0dp"
+                        android:layout_height="54dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_cream_button"
+                        android:fontFamily="@font/kedebideri"
+                        android:textAllCaps="false"
+                        android:textColor="#FF8C38" />
+                </LinearLayout>
+
+                <!-- Categories -->
+                <HorizontalScrollView
+                    android:id="@+id/categories_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:clipToPadding="false"
+                    android:paddingHorizontal="24dp"
+                    android:scrollbars="none"
+                    app:layout_constraintTop_toBottomOf="@id/action_buttons">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_chip_selected"
+                            android:fontFamily="@font/kedebideri"
+                            android:paddingHorizontal="24dp"
+                            android:paddingVertical="8dp"
+                            android:text="@string/category_meals"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="12dp"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_chip_unselected"
+                            android:fontFamily="@font/kedebideri"
+                            android:paddingHorizontal="24dp"
+                            android:paddingVertical="8dp"
+                            android:text="@string/category_dessert"
+                            android:textColor="#999999" />
+
+                        <View
+                            android:layout_width="12dp"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_chip_unselected"
+                            android:fontFamily="@font/kedebideri"
+                            android:paddingHorizontal="24dp"
+                            android:paddingVertical="8dp"
+                            android:text="@string/category_snacks"
+                            android:textColor="#999999" />
+
+                        <View
+                            android:layout_width="12dp"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_chip_unselected"
+                            android:fontFamily="@font/kedebideri"
+                            android:paddingHorizontal="24dp"
+                            android:paddingVertical="8dp"
+                            android:text="@string/category_drinks"
+                            android:textColor="#999999" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/tv_section_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/kedebideri"
+                    android:text="@string/section_filipino_meals"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/categories_scroll" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/kedebideri"
+                    android:text="@string/dish_count"
+                    android:textColor="#999999"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_section_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_section_title" />
+
+                <!-- Menu Items List -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/tv_section_title">
+
+                    <include layout="@layout/item_menu_dish_adobo" />
+                    <include layout="@layout/item_menu_dish_sinigang" />
+                    <include layout="@layout/item_menu_dish_lechon" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Floating Back Button (must be last to be on top) -->
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_white_circle"
+        android:contentDescription="@string/nav_back"
+        android:padding="10dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
