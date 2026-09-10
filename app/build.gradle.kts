@@ -29,6 +29,17 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
+    sourceSets {
+        getByName("main") {
+            res.srcDirs(
+                "src/main/res/layouts/activities",
+                "src/main/res/layouts/items",
+                "src/main/res/layouts/components",
+                "src/main/res"
+            )
+        }
+    }
 }
 
 dependencies {

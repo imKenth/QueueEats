@@ -19,7 +19,7 @@ class DashboardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_dashboard)
 
         updateProfileUI()
 
@@ -40,6 +40,11 @@ class DashboardActivity : AppCompatActivity() {
 
         val homeContent = findViewById<View>(R.id.home_content)
         val profileContent = findViewById<View>(R.id.profile_content)
+
+        val btnBranchPoblacion = findViewById<View>(R.id.btnBranchPoblacion)
+        val btnBranchCalinan = findViewById<View>(R.id.btnBranchCalinan)
+
+
 
         navHome?.setOnClickListener {
             navHome.setBackgroundResource(R.drawable.bg_navbar_selected)
@@ -69,6 +74,18 @@ class DashboardActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+        btnBranchPoblacion?.setOnClickListener {
+            val intent = Intent(this, Branch1Activity::class.java)
+            startActivity(intent)
+        }
+
+        btnBranchCalinan?.setOnClickListener {
+            val intent = Intent(this, Branch1Activity::class.java)
+            startActivity(intent)
+        }
+
+
 
     }
 

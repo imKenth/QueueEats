@@ -28,6 +28,9 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
+            android:name=".Branch1Activity"
+            android:exported="false" />
+        <activity
             android:name=".splashScreen"
             android:exported="true">
             <intent-filter>

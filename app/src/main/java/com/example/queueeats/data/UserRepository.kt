@@ -18,10 +18,6 @@ object UserRepository {
         users.add(user)
     }
 
-    fun getUserByEmail(email: String): User? {
-        return users.find { it.email == email }
-    }
-
     fun validateUser(email: String, password: String): User? {
         return users.find { it.email == email && it.password == password }
     }

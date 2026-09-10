@@ -18,7 +18,7 @@ class splashScreen : AppCompatActivity() {
         
         // Enables edge-to-edge display for the splash screen background.
         enableEdgeToEdge()
-        setContentView(R.layout.splashscreen)
+        setContentView(R.layout.activity_splash)
 
         // Part 1: Immersive Mode logic. 
         // This hides the status bar and navigation bar for a completely clean splash experience.

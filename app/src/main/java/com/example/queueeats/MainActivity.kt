@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         
         // Enables edge-to-edge display, allowing the app content to draw behind system bars.
         enableEdgeToEdge()
-        setContentView(R.layout.signinscreen)
+        setContentView(R.layout.activity_sign_in)
 
         // Part 2: Window Insets Listener. 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -35,6 +35,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
+        
 
 
 
