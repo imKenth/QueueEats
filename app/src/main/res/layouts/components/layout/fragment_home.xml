@@ -49,6 +49,18 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp" />
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnViewBranchesMap"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_orange_button"
+            android:fontFamily="@font/kedebideri"
+            android:text="View branches on map"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
         <include
             layout="@layout/layout_how_it_works"
             android:layout_width="match_parent"
