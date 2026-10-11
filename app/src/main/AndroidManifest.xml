@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -29,6 +30,9 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Branch1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".BranchMapActivity"
             android:exported="false" />
         <activity
             android:name=".splashScreen"

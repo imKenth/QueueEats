@@ -1,6 +1,8 @@
 package com.example.queueeats
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -21,6 +23,15 @@ class Branch1Activity : AppCompatActivity() {
 
         findViewById<ImageView>(R.id.btn_back)?.setOnClickListener {
             finish()
+        }
+
+        findViewById<View>(R.id.location_row)?.setOnClickListener {
+            val intent = Intent(this, BranchMapActivity::class.java).apply {
+                putExtra(BranchMapActivity.EXTRA_BRANCH_NAME, DashboardActivity.BRANCH_1_NAME)
+                putExtra(BranchMapActivity.EXTRA_LATITUDE, DashboardActivity.CANTEEN_1_LATITUDE)
+                putExtra(BranchMapActivity.EXTRA_LONGITUDE, DashboardActivity.CANTEEN_1_LONGITUDE)
+            }
+            startActivity(intent)
         }
     }
 }
