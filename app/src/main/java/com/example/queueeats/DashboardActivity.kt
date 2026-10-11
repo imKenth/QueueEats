@@ -5,10 +5,14 @@ import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
 import android.widget.FrameLayout
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -71,6 +75,25 @@ class DashboardActivity : AppCompatActivity() {
         val locationContainerPoblacion = findViewById<View>(R.id.locationContainerPoblacion)
         val locationContainerCalinan = findViewById<View>(R.id.locationContainerCalinan)
 
+        // Secret Staff Portal access: Tap app logo 3 times consecutively
+        var logoClickCount = 0
+        var lastLogoClickTime = 0L
+        val appLogoHeader = findViewById<ImageView>(R.id.app_logo_header)
+        appLogoHeader?.setOnClickListener {
+            val currentTime = System.currentTimeMillis()
+            if (currentTime - lastLogoClickTime > 1500) {
+                logoClickCount = 1
+            } else {
+                logoClickCount++
+            }
+            lastLogoClickTime = currentTime
+
+            if (logoClickCount >= 3) {
+                logoClickCount = 0
+                showStaffPasswordDialog()
+            }
+        }
+
         // Switch to Home Tab
         navHome?.setOnClickListener {
             navHome.setBackgroundResource(R.drawable.bg_navbar_selected)
@@ -109,11 +132,6 @@ class DashboardActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        findViewById<View>(R.id.btn_profile_staff_portal)?.setOnClickListener {
-            val intent = Intent(this, StaffPortalActivity::class.java)
-            startActivity(intent)
-        }
-
         // ---------------------------------------------------------------------
         // BRANCH CARD CLICK LISTENERS -> Opens Branch Details Screen
         // ---------------------------------------------------------------------
@@ -135,7 +153,7 @@ class DashboardActivity : AppCompatActivity() {
         // BRANCH LOCATION AREA CLICK LISTENERS -> Opens Map Screen with Coordinates
         // ---------------------------------------------------------------------
 
-        // Click handler for JanPol Canteen 1 location area
+        // Click handler for Janpol Ecoland Stall Orange location area
         locationContainerPoblacion?.setOnClickListener {
             val intent = Intent(this, BranchMapActivity::class.java).apply {
                 putExtra(BranchMapActivity.EXTRA_BRANCH_NAME, BRANCH_1_NAME)
@@ -145,7 +163,7 @@ class DashboardActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Click handler for JanPol Canteen 2 location area
+        // Click handler for Janpol Calinan stall red location area
         locationContainerCalinan?.setOnClickListener {
             val intent = Intent(this, BranchMapActivity::class.java).apply {
                 putExtra(BranchMapActivity.EXTRA_BRANCH_NAME, BRANCH_2_NAME)
@@ -156,9 +174,41 @@ class DashboardActivity : AppCompatActivity() {
         }
     }
 
-    /**
-     * Updates the user profile section in the dashboard with currently logged-in user data.
-     */
+    private fun showStaffPasswordDialog() {
+        val input = EditText(this).apply {
+            inputType = android.text.InputType.TYPE_CLASS_NUMBER or android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD
+            hint = "Enter PIN (123)"
+            setPadding(48, 24, 48, 24)
+        }
+
+        val container = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(48, 24, 48, 24)
+            addView(TextView(this@DashboardActivity).apply {
+                text = "Staff Portal Security\nEnter security password to unlock:"
+                textSize = 15f
+                setTypeface(null, android.graphics.Typeface.BOLD)
+            })
+            addView(input)
+        }
+
+        AlertDialog.Builder(this)
+            .setTitle("Staff Portal Access")
+            .setView(container)
+            .setPositiveButton("Unlock") { _, _ ->
+                val pin = input.text.toString().trim()
+                if (pin == "123") {
+                    Toast.makeText(this, "Access Granted", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, StaffPortalActivity::class.java)
+                    startActivity(intent)
+                } else {
+                    Toast.makeText(this, "Incorrect password", Toast.LENGTH_SHORT).show()
+                }
+            }
+            .setNegativeButton("Cancel", null)
+            .show()
+    }
+
     private fun updateProfileUI() {
         val user = UserRepository.currentUser
         if (user != null) {
