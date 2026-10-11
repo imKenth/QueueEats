@@ -32,8 +32,31 @@
             android:name=".Branch1Activity"
             android:exported="false" />
         <activity
+            android:name=".Branch2Activity"
+            android:exported="false" />
+        <activity
             android:name=".BranchMapActivity"
             android:exported="false" />
+        <activity
+            android:name=".CartCheckoutActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".OrderConfirmationActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".LiveQueueActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".OrderHistoryActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".StaffPortalActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".splashScreen"
             android:exported="true">
