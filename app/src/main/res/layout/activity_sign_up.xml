@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signup_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupActivity">
+
+    <!-- Guideline for Form Section -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/form_boundary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="291dp" />
+
+    <!-- Header Branding Component -->
+    <include
+        layout="@layout/layout_header_branding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Scrollable Form Area -->
+    <ScrollView
+        android:id="@+id/form_scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/form_boundary">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="24dp">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/signup_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/konkhmer_sleokchher"
+                android:text="Create Account"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/signup_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/kedebideri"
+                android:text="Join the QueueEats community"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/signup_title" />
+
+            <!-- Feedback Message -->
+            <TextView
+                android:id="@+id/signup_feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/kedebideri"
+                android:textColor="#FF0000"
+                android:textSize="11sp"
+                android:visibility="gone"
+                android:background="@drawable/bg_white_circle"
+                tools:text="Please fill all fields"
+                tools:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/signup_subtitle" />
+
+            <!-- Full Name Label & Input -->
+            <TextView
+                android:id="@+id/name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/kedebideri"
+                android:text="Full Name"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/signup_feedback" />
+
+            <EditText
+                android:id="@+id/nameInput"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/bg_input_field"
+                android:drawableStart="@drawable/ic_user"
+                android:drawablePadding="10dp"
+                android:hint="Kenth Daryl Velasco"
+                android:inputType="textPersonName"
+                android:paddingStart="10dp"
+                android:singleLine="true"
+                android:textColor="#333333"
+                android:textColorHint="#999999"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name_label" />
+
+            <!-- Email Label & Input -->
+            <TextView
+                android:id="@+id/email_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/kedebideri"
+                android:text="Email Address"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nameInput" />
+
+            <EditText
+                android:id="@+id/usernameInput"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/bg_input_field"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="10dp"
+                android:hint="you@school.edu.ph"
+                android:inputType="textEmailAddress"
+                android:paddingStart="10dp"
+                android:singleLine="true"
+                android:textColor="#333333"
+                android:textColorHint="#999999"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/email_label" />
+
+            <!-- Password Label & Input -->
+            <TextView
+                android:id="@+id/password_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/kedebideri"
+                android:text="Password"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/usernameInput" />
+
+            <EditText
+                android:id="@+id/passwordInput"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/bg_input_field"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawablePadding="10dp"
+                android:hint="*********"
+                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:singleLine="true"
+                android:textColor="#333333"
+                android:textColorHint="#999999"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/password_label" />
+
+            <!-- Terms and Conditions Checkbox -->
+            <LinearLayout
+                android:id="@+id/terms_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="25dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/passwordInput">
+
+                <CheckBox
+                    android:id="@+id/terms_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="0dp"
+                    android:buttonTint="@color/primary_orange" />
+
+                <TextView
+                    android:id="@+id/terms_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/kedebideri"
+                    android:text="@string/terms_agreement"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- Sign Up Button -->
+            <Button
+                android:id="@+id/signup_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/bg_button_main"
+                android:fontFamily="@font/kedebideri"
+                android:text="Create Account"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/terms_container" />
+
+            <!-- Footer: Already have an account? Sign In -->
+            <LinearLayout
+                android:id="@+id/signup_footer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/signup_button">
+
+                <TextView
+                    android:id="@+id/alreadyAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kedebideri"
+                    android:text="Already have an account?"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/goto_signin"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/kedebideri"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="0dp"
+                    android:text="Sign In"
+                    android:textColor="#803700"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
