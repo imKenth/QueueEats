@@ -14,9 +14,9 @@
     <string name="branch_name">QueueEats</string>
     <string name="branch_rating">4.8 (120)</string>
     <string name="branch_distance">0.3 km</string>
-    <string name="branch_location_full">JanPol Canteen 1 • Orange Stall</string>
-    <string name="branch_location_1">JanPol Canteen 1 &#8226;</string>
-    <string name="branch_location_2">Orange Stall</string>
+    <string name="branch_location_full">Janpol Ecoland Stall Orange</string>
+    <string name="branch_location_1">Janpol Ecoland &#8226;</string>
+    <string name="branch_location_2">Stall Orange</string>
     <string name="branch_time_range">6:00AM - 10:00PM</string>
     <string name="location_desc">Location Pin</string>
     <string name="dot_separator"> &#8226; </string>
@@ -53,8 +53,8 @@
     <string name="cal_branch_name">QueueEats</string>
     <string name="cal_branch_rating">4.6 (134)</string>
     <string name="cal_branch_distance">0.5 km</string>
-    <string name="cal_branch_location_1">JanPol Canteen 2 &#8226;</string>
-    <string name="cal_branch_location_2">Red Stall</string>
+    <string name="cal_branch_location_1">Janpol Calinan &#8226;</string>
+    <string name="cal_branch_location_2">stall red</string>
     <string name="cal_branch_banner_desc">Branch Banner</string>
     <string name="cal_branch_logo_desc">Branch Logo</string>
     <string name="cal_star_desc">Rating Star</string>
