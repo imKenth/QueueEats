@@ -11,7 +11,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-
 import android.widget.TextView
 import com.example.queueeats.data.UserRepository
 
@@ -31,7 +30,7 @@ class DashboardActivity : AppCompatActivity() {
 
         val logButton = findViewById<Button>(R.id.logButton)
 
-        // Navigation Logic
+        // Existing bottom navigation
         val navHome = findViewById<FrameLayout>(R.id.navHome)
         val navMore = findViewById<FrameLayout>(R.id.navMore)
 
@@ -43,8 +42,7 @@ class DashboardActivity : AppCompatActivity() {
 
         val btnBranchPoblacion = findViewById<View>(R.id.btnBranchPoblacion)
         val btnBranchCalinan = findViewById<View>(R.id.btnBranchCalinan)
-
-
+        val btnViewBranchesMap = findViewById<View>(R.id.btnViewBranchesMap)
 
         navHome?.setOnClickListener {
             navHome.setBackgroundResource(R.drawable.bg_navbar_selected)
@@ -70,23 +68,23 @@ class DashboardActivity : AppCompatActivity() {
 
         logButton?.setOnClickListener {
             UserRepository.currentUser = null
-            val intent = Intent(this, SignInActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, SignInActivity::class.java))
             finish()
         }
 
+        // Keep the existing branch-details navigation unchanged.
         btnBranchPoblacion?.setOnClickListener {
-            val intent = Intent(this, Branch1Activity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, Branch1Activity::class.java))
         }
 
         btnBranchCalinan?.setOnClickListener {
-            val intent = Intent(this, Branch1Activity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, Branch1Activity::class.java))
         }
 
-
-
+        // New entry point for the OpenStreetMap screen.
+        btnViewBranchesMap?.setOnClickListener {
+            startActivity(Intent(this, BranchMapActivity::class.java))
+        }
     }
 
     private fun updateProfileUI() {
@@ -95,7 +93,6 @@ class DashboardActivity : AppCompatActivity() {
             findViewById<TextView>(R.id.profile_name)?.text = user.name
             findViewById<TextView>(R.id.profile_email)?.text = user.email
             findViewById<TextView>(R.id.profile_phone)?.text = "No phone set"
-
             findViewById<TextView>(R.id.header_profName)?.text = user.name
         }
     }
