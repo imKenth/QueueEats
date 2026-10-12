@@ -59,7 +59,7 @@ QueueEats is designed to work **out of the box with zero paid API keys**:
 
 ---
 
-## Developer
+## Developers
 
 **Kenth Daryl Velasco**  
 *Lead Android Developer*
