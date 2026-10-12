@@ -63,6 +63,25 @@ QueueEats is designed to work **out of the box with zero paid API keys**:
 
 **Kenth Daryl Velasco**  
 *Lead Android Developer*
+**James Bennidict L. Geraldez**
+*UI/UX & Frontend XML Developer*
+**Rubie Tacpan** 
+*UI/UX & Frontend XML Developer*
+**John Paolo Magbanua**
+*UI/UX & Frontend XML Developer*
+**Dwayne R-Jay J. Anuego**
+*QA, Testing & Documentation Lead*
+**Lordan D. Canchico**
+*QA, Testing & Documentation Lead*
+**Aj Clyde Gutierrez**
+*QA, Testing & Documentation Lead*
+**Gregg S. Pelderos**
+*Queue & Inventory Systems Specialist*
+**Joseph T. Saligumba Jr.**
+*Queue & Inventory Systems Specialist*
+**Dhareen Khent Villacura**
+*Queue & Inventory Systems Specialist*
+
 
 ---
 *Developed as part of the QueueEats Project.*
